@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-color: #F4ECE4;
+  --secondary-background-color: #D9CAB3;
+  --primary-text-color: #4B3F37;
+  --secondary-text-color: #6A5E55;
+  --accent-color: #BA6A47;
+  --success-color: #7D8F69;
+  --warning-color: #C19130;
+  --error-color: #A84D3A;
+  --border-color: #8A7967;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-transition {
+  transition: all 0.3s ease;
+}
+
+.card-transition:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(138, 121, 103, 0.15);
+}
+
+.dashboard-card {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(75, 63, 55, 0.1);
+}
+
+.animate-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    var(--background-color) 0%,
+    var(--secondary-background-color) 100%
+  );
+}
